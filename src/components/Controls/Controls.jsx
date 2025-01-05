@@ -106,8 +106,7 @@ const Controls = ({ advanceMode, setAdvanceMode, setMapping }) => {
               value={inputText}
               onChange={handleInputChange}
               placeholder="Enter your secret key"
-              pattern="[A-Za-z\s]*"
-              title="Only alphabets and spaces are allowed"
+              title="Enter secret key to generate unique mapping"
               required
             />
           </div>

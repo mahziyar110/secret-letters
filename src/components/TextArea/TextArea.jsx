@@ -52,10 +52,13 @@ const TextArea = ({ mapping, decryptMode, setDecryptMode }) => {
 
   const transformText = (text, mapping) => {
     return text
-      .toUpperCase()
       .split("")
       .map((char) => {
-        return mapping[char] || char;
+        const upperChar = char.toUpperCase();
+        const mappedChar = mapping[upperChar] || char;
+        return char === char.toLowerCase()
+          ? mappedChar.toLowerCase()
+          : mappedChar;
       })
       .join("");
   };
@@ -76,7 +79,7 @@ const TextArea = ({ mapping, decryptMode, setDecryptMode }) => {
   }, [mapping]);
 
   const handleInputChange = (e) => {
-    const text = e.target.value.toUpperCase();
+    const text = e.target.value;
     setInputText(text);
 
     if (debounceTimer.current) {
