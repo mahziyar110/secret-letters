@@ -1,0 +1,130 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color:#d3f8e2;
+  --secondary-color-dark:#a2e7b8;
+  --bcg-color:#d9eaf7;
+
+  --heading-color:#0056b3;
+  --border-color:#ccc;
+  
+  --btn-color:#4aa3e7;
+
+  --font-color-light:#fff;
+  --font-color-dark:#333;
+  
+  --success-color:#28a745;
+  --error-color:#dc3545;
+}
+
+:root.dark-mode {
+  --primary-color: #2d2db8;
+  --secondary-color: #aaa;
+  --secondary-color-dark: #7a7a7a;
+  --bcg-color: #121212;
+
+  --heading-color: #b8d4ff;
+  --border-color: #444;
+  
+  --font-color-light: #eee;
+  --font-color-dark: #fff;
+  
+  --success-color: #47d16b;
+  --error-color: #ff6f61;
+}
+
+
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bcg-color);
+  color: var(--font-color-dark);
+}
+
+#root {
+  margin: auto;
+  padding: 10px 20px;
+  width: 90%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+button {
+  margin: 10px 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--font-color-light);
+  background-color: var(--btn-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+} 
+
+button:active {
+  transform: scale(0.98);
+}
+
+.btn-icon {
+  margin: 0;
+  padding: 0;
+  background-color: unset;
+}
+
+.btn-icon:hover {
+  background-color: unset;
+  transform: scale(1.1);
+}
+
+.btn-icon:active {
+  transform: scale(0.95);
+}
+
+.app-title {
+  font-size: 24px;
+  color: var(--heading-color);
+  font-weight: bold;
+  margin: 5px auto;
+  width: 80%;
+}
+
+.theme {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 24px;
+  background-color: var(--secondary-color);
+}
+
+.theme:hover {
+  background-color: var(--secondary-color-dark);
+}
+
+@media (max-width: 768px) {
+  #root {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  #root {
+    width: 100%;
+    padding: 5px;
+  }
+
+  button {
+    margin: 5px;
+  }
+}

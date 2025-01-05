@@ -1,0 +1,38 @@
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.mode-button {
+    position: absolute;
+    right: 0;
+    margin-right: 0px;
+}
+
+.advance-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.key-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width: 1024px) {
+    .controls {
+        flex-direction: column-reverse;
+    }
+    .advance-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .mode-button {
+        position: static;
+    }
+}

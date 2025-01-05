@@ -1,0 +1,81 @@
+.mapping-container {
+    text-align: center;
+  }
+  
+  .mapping-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px auto;
+  }
+  
+  .mapping-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .mapping-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .letter-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: var(--secondary-color);
+  }
+  
+  .arrow {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 0px;
+    transform: rotate(90deg);
+  }
+
+  .arrow.reversed {
+    transform: rotate(-90deg);
+  }
+  
+  .original-letter {
+    color: var(var(--font-color-dark));
+  }
+  
+  .mapped-letter {
+    color: var(--primary-color);
+  }
+  
+  .letter-box:hover {
+    transform: scale(1.1);
+  }
+  
+  .mapping-item:hover .letter-box {
+    background-color: var(--secondary-color-dark);
+  }
+  
+  .mapping-item:hover .original-letter,
+  .mapping-item:hover .mapped-letter {
+    color: var(--primary-color);
+  }
+  
+  @media (max-width: 768px) {
+    .mapping-item {
+      flex-direction: row;
+    }
+    .arrow {
+      transform: none;
+    }
+    .arrow.reversed {
+      transform: rotate(180deg);
+    }
+}
